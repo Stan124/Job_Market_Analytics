@@ -71,8 +71,8 @@ fig, ax = plt.subplots(len(job_titles), 1)
 
 
 for i, job_title in enumerate(job_titles):
-    df_plot = df_skills_perc[df_skills_perc['job_title_short'] == job_title].head(5)[::-1]
-    sns.barplot(data=df_plot, x='skill_percent', y='job_skills', ax=ax[i], hue='skill_count', palette='dark:b_r')
+    df_plot = df_skills_perc[df_skills_perc['job_title_short'] == job_title].head(5)
+    sns.barplot(data=df_plot, x='skill_percent', y='job_skills', ax=ax[i], palette='dark:b_r')
 
 plt.show()
 ```
@@ -93,7 +93,7 @@ plt.show()
 
 To find how skills are trending in 2023 for Data Analysts, I filtered data analyst positions and grouped the skills by the month of the job postings. This got me the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
 
-View my notebook with detailed steps here: [3_Skills_Trend](3_Skills_Trend.ipynb).
+View my notebook with detailed steps here: [Skills_Trend](Skills%20Trend%20Data%20Analysis.ipynb).
 
 ### Visualize Data
 
